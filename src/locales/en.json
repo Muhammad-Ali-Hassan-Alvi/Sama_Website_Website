@@ -1,0 +1,401 @@
+{
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "brand": {
+    "name": "Sama Digital",
+    "tagline": "A global software studio delivering product engineering, digital platforms, and measurable growth for ambitious organizations.",
+    "short": "Software Studio"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "work": "Work",
+    "about": "About",
+    "team": "Team",
+    "careers": "Careers",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "caseStudies": "Case Studies",
+    "successStories": "Success Stories"
+  },
+  "hero": {
+    "eyebrow": "Remote-first · Global delivery",
+    "headlines": [
+      { "top": "Engineering", "bottom": "Digital excellence" },
+      { "top": "Products built for", "bottom": "A global market" },
+      { "top": "Strategy, design,", "bottom": "And engineering" },
+      { "top": "Ship with", "bottom": "Confidence" }
+    ],
+    "description": "Sama Digital partners with founders and enterprise teams to design, build, and scale web products, platforms, and growth programs — with senior talent, clear accountability, and delivery across time zones.",
+    "primaryCta": "Schedule a consultation",
+    "secondaryCta": "View case studies",
+    "manifesto": "We operate as an extension of your team — senior practitioners on every engagement, transparent communication, and standards we apply to our own products.",
+    "promises": ["Senior leadership on every project", "Structured weekly delivery", "Global timezone coverage"],
+    "cardTitle": "Core capabilities",
+    "cardItems": ["Product & platform engineering", "Web applications & APIs", "Performance marketing & SEO"],
+    "floatingTagline": "Precision engineering. Disciplined delivery. Built for organizations that value outcomes over optics."
+  },
+  "clients": {
+    "title": "Trusted by teams worldwide",
+    "subtitle": "From venture-backed startups to established enterprises — we deliver remotely, with consistency and rigor."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Capabilities that scale with your ambition",
+    "subtitle": "From digital transformation and enterprise applications to AI, data, and commerce — one partner across the stack.",
+    "capabilitiesTitle": "Capabilities",
+    "learnMore": "Learn more",
+    "viewAll": "View all capabilities",
+    "items": {
+      "digitalTransformation": {
+        "title": "Digital Transformation",
+        "description": "Web, mobile, custom software, and UX/UI — engineered as one continuous product discipline.",
+        "points": ["Web & app development", "Custom software", "UX/UI design"]
+      },
+      "businessApplications": {
+        "title": "Business Applications",
+        "description": "Microsoft Dynamics, Power Apps, and Salesforce implementations that fit how you sell and operate.",
+        "points": ["Dynamics 365 ERP & CRM", "Power Apps", "Salesforce"]
+      },
+      "genAi": {
+        "title": "Gen AI",
+        "description": "LLM copilots, RAG, and workflow automation with guardrails your stakeholders can trust.",
+        "points": ["Copilots & chat UX", "Knowledge bases", "Eval & observability"]
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "description": "Pipelines, warehouses, and dashboards that align marketing, product, and leadership on one truth.",
+        "points": ["BI & dashboards", "Product analytics", "Attribution"]
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Store design, development, and ongoing support for brands selling globally.",
+        "points": ["Design & development", "Maintenance & support", "Localization"]
+      }
+    }
+  },
+  "whyUs": {
+    "eyebrow": "Why Sama Digital",
+    "title": "A standard of delivery you can measure",
+    "subtitle": "We unite strategy, design, and engineering under one roof — so your digital initiatives move forward with clarity, velocity, and accountability.",
+    "items": {
+      "bilingual": {
+        "title": "Global-ready by design",
+        "description": "Multilingual architecture, RTL/LTR layouts, and locale-aware content — integrated from inception, not retrofitted."
+      },
+      "speed": {
+        "title": "Disciplined velocity",
+        "description": "Structured sprints, defined milestones, and direct access to senior practitioners — without layers of account management."
+      },
+      "data": {
+        "title": "Outcome-driven decisions",
+        "description": "Every recommendation is anchored to measurable KPIs: conversion, retention, performance, and time-to-market."
+      },
+      "design": {
+        "title": "Refined product craft",
+        "description": "Interfaces that communicate trust and precision — thoughtful typography, motion, and interaction design at every touchpoint."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Our methodology",
+    "title": "A structured path from strategy to launch",
+    "scrollHint": "Scroll to explore each phase",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "We align on business objectives, user needs, competitive landscape, and technical requirements before a single line is written."
+      },
+      "design": {
+        "title": "Design & build",
+        "description": "Strategy, UX, content, and engineering progress in parallel — reducing risk and accelerating time to market."
+      },
+      "launch": {
+        "title": "Launch & optimize",
+        "description": "We deploy, monitor performance, and iterate based on data — remaining engaged through stabilization and growth."
+      }
+    }
+  },
+  "featuredWork": {
+    "eyebrow": "Case studies",
+    "title": "Proven outcomes across industries",
+    "subtitle": "Selected engagements demonstrating measurable impact, technical rigor, and cross-market execution."
+  },
+  "openSource": {
+    "eyebrow": "Open source",
+    "title": "Contributing to the ecosystem",
+    "subtitle": "Tools and frameworks we maintain publicly — reflecting the same engineering standards we bring to client engagements.",
+    "viewRepo": "View on GitHub",
+    "projects": {
+      "locale-ui": {
+        "name": "Locale UI Kit",
+        "description": "RTL/LTR-ready React components with i18n patterns baked in.",
+        "stars": "240+"
+      },
+      "ship-kit": {
+        "name": "Ship Kit",
+        "description": "Next.js starter with auth, i18n, and deployment presets for fast launches.",
+        "stars": "180+"
+      },
+      "motion-primitives": {
+        "name": "Motion Primitives",
+        "description": "Lightweight scroll and reveal animations for React + Framer Motion.",
+        "stars": "95+"
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Client perspectives",
+    "title": "What our partners say",
+    "subtitle": "Feedback from organizations that chose a focused studio over a traditional agency model.",
+    "items": [
+      {
+        "quote": "Sama rebuilt our acquisition funnel and reduced cost-per-lead by 38% within the first quarter — with full Arabic and English parity.",
+        "name": "Layla Al-Rashid",
+        "role": "Marketing Director, Noor Retail"
+      },
+      {
+        "quote": "Our customer dashboard was delivered in six weeks — multilingual, accessible, and architected for long-term scale.",
+        "name": "Omar Hassan",
+        "role": "Founder, FleetPulse"
+      },
+      {
+        "quote": "A rare partner that treats internationalization as a core requirement — not a post-launch afterthought.",
+        "name": "Sarah Mitchell",
+        "role": "Head of Product, PayFlow"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to advance your next initiative?",
+    "subtitle": "Share your objectives with our team. We respond within one business day with a clear path forward.",
+    "button": "Contact us"
+  },
+  "footer": {
+    "description": "Sama Digital is a global software studio — engineering products, platforms, and growth systems for organizations that demand precision and accountability.",
+    "quickLinks": "Quick links",
+    "company": "Company",
+    "contact": "Contact",
+    "email": "hello@sama.digital",
+    "phone": "Remote worldwide",
+    "location": "Remote · Worldwide",
+    "rights": "All rights reserved."
+  },
+  "about": {
+    "title": "About Sama Digital",
+    "subtitle": "A software studio built for modern organizations",
+    "story": "Sama Digital was founded on a straightforward principle: organizations deserve a technology partner that combines senior expertise with transparent delivery. We engineer products, platforms, and growth programs for teams operating in competitive, global markets.",
+    "missionTitle": "Our mission",
+    "mission": "Enable ambitious organizations to ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
+    "valuesTitle": "Our principles",
+    "values": [
+      "Senior talent on every engagement.",
+      "Global capability without geographic limitation.",
+      "Craft and accountability in equal measure."
+    ],
+    "beliefs": [
+      "Direct access to the people doing the work.",
+      "Weekly progress reviews, not quarterly surprises.",
+      "Internationalization integrated from day one."
+    ]
+  },
+  "contactPage": {
+    "title": "Contact us",
+    "subtitle": "Describe your objectives and we will propose a structured approach tailored to your timeline and scope.",
+    "form": {
+      "name": "Full name",
+      "email": "Work email",
+      "company": "Company",
+      "message": "Tell us about your project",
+      "submit": "Send message",
+      "success": "Thanks — we'll be in touch soon."
+    }
+  },
+  "servicesPage": {
+    "title": "Capabilities",
+    "subtitle": "End-to-end digital capabilities — from transformation and enterprise apps to AI, security, and commerce.",
+    "detailEyebrow": "Service overview",
+    "capabilities": "Capabilities",
+    "outcomes": "Expected outcomes",
+    "relatedWork": "Related case studies"
+  },
+  "industriesPage": {
+    "title": "Industries",
+    "subtitle": "Sector playbooks for teams building globally.",
+    "detailEyebrow": "Industry expertise",
+    "challenges": "Common challenges",
+    "solutions": "How we help"
+  },
+  "industryPages": {
+    "retail": {
+      "title": "Retail & E-commerce",
+      "subtitle": "Convert browsers into buyers — in any language.",
+      "overview": "We help retail brands launch storefronts, seasonal campaigns, and retention flows tuned for how people actually shop online.",
+      "challenges": ["Low conversion on mobile", "Fragmented ad spend", "Slow checkout flows"],
+      "solutions": ["Locale-aware product pages", "Performance paid social", "CRO on cart & checkout"]
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "subtitle": "Trust-building digital experiences for patients and providers.",
+      "overview": "Compliant, accessible websites and patient acquisition funnels with medical copy reviewed by specialists.",
+      "challenges": ["Complex compliance needs", "Low trust in ads", "Poor appointment conversion"],
+      "solutions": ["Accessible multilingual sites", "Educational content funnels", "Secure booking flows"]
+    },
+    "fintech": {
+      "title": "Fintech",
+      "subtitle": "Product marketing and web builds for regulated markets.",
+      "overview": "We partner with fintech teams on landing pages, onboarding flows, and dashboards that communicate trust in both languages.",
+      "challenges": ["High CAC", "Regulatory messaging", "Complex product explainers"],
+      "solutions": ["Conversion-focused landing pages", "Multilingual product copy", "Secure MERN/Next.js builds"]
+    },
+    "hospitality": {
+      "title": "Hospitality & Travel",
+      "subtitle": "Drive bookings with seasonal campaigns and stunning web presence.",
+      "overview": "From boutique hotels to travel platforms — we craft visual storytelling and performance campaigns for international and regional guests.",
+      "challenges": ["Seasonal demand swings", "Multi-language guest segments", "Low direct bookings"],
+      "solutions": ["Multilingual booking sites", "Meta & Google travel campaigns", "Email retention flows"]
+    }
+  },
+  "caseStudiesPage": {
+    "title": "Case Studies",
+    "subtitle": "Measured outcomes from recent product and growth work.",
+    "readCase": "Read case study",
+    "metricLabel": "Key result",
+    "detailEyebrow": "Success story",
+    "challenge": "The challenge",
+    "approach": "Our approach",
+    "results": "Results"
+  },
+  "caseStudyPages": {
+    "noor-retail": {
+      "title": "Noor Retail",
+      "subtitle": "Arabic storefront relaunch with 38% lower CPL",
+      "client": "Noor Retail · Global",
+      "service": "Digital Marketing",
+      "challenge": "English campaigns performed well but Arabic landing pages converted at half the rate, inflating overall acquisition costs.",
+      "approach": "We rebuilt Arabic product pages with RTL-first design, rewrote ad copy with native reviewers, and restructured Meta campaigns by language.",
+      "results": ["38% lower cost-per-lead", "2.4x Arabic landing page CR", "Live in 6 weeks"],
+      "summary": "A full Arabic funnel rebuild that finally matched English campaign performance."
+    },
+    "fleetpulse": {
+      "title": "FleetPulse",
+      "subtitle": "Bilingual Next.js dashboard in six weeks",
+      "client": "FleetPulse · Remote",
+      "service": "Next.js Development",
+      "challenge": "FleetPulse needed a customer dashboard supporting Arabic RTL and English LTR without maintaining two separate codebases.",
+      "approach": "We shipped a Next.js app with locale routing, shared component library, and accessible UI patterns tested in both directions.",
+      "results": ["Shipped in 6 weeks", "99.9% uptime post-launch", "Full AR/EN parity"],
+      "summary": "One codebase, two languages, enterprise-grade performance."
+    },
+    "gulfpay": {
+      "title": "PayFlow",
+      "subtitle": "Product marketing for a global fintech launch",
+      "client": "PayFlow · Worldwide",
+      "service": "Digital Marketing + Web",
+      "challenge": "Launching a payments product required trust-heavy messaging across multiple locales without losing brand premium.",
+      "approach": "We paired regulatory-aware copywriters with a bright marketing site and phased ad rollout across Meta and Google.",
+      "results": ["52% increase in qualified signups", "Locale-native product pages", "4 sprint delivery"],
+      "summary": "A fintech launch that felt local everywhere and cohesive everywhere else."
+    }
+  },
+  "careersPage": {
+    "title": "Careers",
+    "subtitle": "Join a remote-first studio building products for the open web.",
+    "openRoles": "Open roles",
+    "apply": "Apply now",
+    "location": "Location",
+    "type": "Type",
+    "perksTitle": "Why work with us",
+    "perks": ["Remote-first worldwide", "Small team, real ownership", "Multilingual projects welcome", "Learning budget & conferences"]
+  },
+  "careerPages": {
+    "senior-react-dev": {
+      "title": "Senior React Developer",
+      "location": "Remote · Worldwide",
+      "type": "Full-time",
+      "description": "Build React and Next.js products for clients around the globe. You'll own features end-to-end in a small senior team."
+    },
+    "growth-marketer": {
+      "title": "Growth Marketer",
+      "location": "Remote · Worldwide",
+      "type": "Full-time",
+      "description": "Run Meta and Google campaigns for global audiences. You'll optimize funnels and report on measurable growth."
+    },
+    "arabic-copywriter": {
+      "title": "Multilingual Copywriter",
+      "location": "Remote · Worldwide",
+      "type": "Contract",
+      "description": "Write campaign copy, landing pages, and product messaging across English, Arabic, and other locales."
+    }
+  },
+  "teamPage": {
+    "title": "Our Team",
+    "subtitle": "Senior specialists across strategy, design, and engineering.",
+    "join": "We're hiring"
+  },
+  "teamMembers": {
+    "layla": { "name": "Layla Al-Rashid", "role": "Head of Strategy", "bio": "Campaign strategist for retail and SaaS brands across Europe and the Middle East." },
+    "omar": { "name": "Omar Hassan", "role": "Lead Engineer", "bio": "Full-stack developer specializing in MERN and Next.js with i18n architecture." },
+    "sarah": { "name": "Sarah Mitchell", "role": "Design Director", "bio": "Product designer focused on accessible, locale-aware interfaces that feel premium." },
+    "ahmed": { "name": "Ahmed Farouk", "role": "Growth Lead", "bio": "Performance marketer with deep Meta and Google expertise across global markets." }
+  },
+  "pricingPage": {
+    "title": "Pricing",
+    "subtitle": "Transparent packages — scale up when you're ready.",
+    "monthly": "Monthly",
+    "popular": "Most popular",
+    "choose": "Choose plan",
+    "contactSales": "Contact sales"
+  },
+  "pricingPlans": {
+    "starter": {
+      "name": "Starter",
+      "price": "$2,500",
+      "description": "For early-stage teams testing new channels.",
+      "features": ["Single or multi-locale setup", "Landing page + ads setup", "Monthly performance report", "Email support"]
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$5,500",
+      "description": "For teams ready to scale campaigns and ship web updates.",
+      "features": ["Full-funnel campaigns", "CRO & A/B testing", "Bi-weekly strategy calls", "Slack channel access", "Web maintenance hours"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For complex products, multi-market rollouts, and dedicated squads.",
+      "features": ["Dedicated team", "Custom MERN/Next.js builds", "SLA & priority support", "Multi-market expansion", "Quarterly business reviews"]
+    }
+  },
+  "faqPage": {
+    "title": "FAQ",
+    "subtitle": "Answers to common questions about working with Sama Digital.",
+    "items": [
+      { "q": "Do you work with clients internationally?", "a": "Yes. We are a remote-first studio serving clients across Europe, the Americas, Asia, and the Middle East. We align communication and delivery cadence to your timezone." },
+      { "q": "Can you support both marketing and engineering?", "a": "Yes. Many clients engage us for integrated delivery — from acquisition strategy through platform engineering — ensuring alignment across disciplines." },
+      { "q": "How do you approach multilingual products?", "a": "We architect for every target locale from the outset — layout, routing, content, and QA — with native-language review at each stage." },
+      { "q": "What are typical project timelines?", "a": "Campaign launches are typically live within 2–4 weeks. Platform and application projects range from 6–12 weeks depending on scope. We provide a detailed timeline in every proposal." },
+      { "q": "Do you offer ongoing partnerships?", "a": "Yes. We support long-term retainers and embedded squad models for organizations requiring continuous engineering and growth capacity." },
+      { "q": "How do we begin?", "a": "Submit an inquiry through our contact page. We will schedule a discovery call to understand your objectives and recommend an appropriate engagement model." }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has moved.",
+    "back": "Back to home"
+  },
+  "common": {
+    "readMore": "Read more",
+    "backTo": "Back to",
+    "getStarted": "Get started",
+    "viewWork": "View work"
+  }
+}

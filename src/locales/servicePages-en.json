@@ -1,0 +1,152 @@
+{
+  "serviceCategories": {
+    "digitalTransformation": {
+      "title": "Digital Transformation",
+      "description": "Modern web, mobile, and product experiences built for scale, performance, and long-term evolution."
+    },
+    "businessApplications": {
+      "title": "Business Applications",
+      "description": "Enterprise platforms and CRM ecosystems that connect teams, data, and customer journeys."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Storefronts and commerce operations engineered for conversion, reliability, and growth."
+    },
+    "genAi": {
+      "title": "Gen AI",
+      "description": "Practical AI integrations — copilots, automation, and intelligent workflows tied to business outcomes."
+    },
+    "dataAnalytics": {
+      "title": "Data Analytics",
+      "description": "Dashboards, pipelines, and insights that turn raw data into confident decisions."
+    }
+  },
+  "servicePages": {
+    "web-development": {
+      "title": "Web Development",
+      "subtitle": "High-performance websites and web platforms built to scale.",
+      "overview": "We deliver marketing sites, portals, and web platforms with clean architecture, strong performance, and multilingual-ready UI when you need it.",
+      "capabilities": ["Responsive frontends", "CMS & headless integrations", "SEO & Core Web Vitals", "Cloud deployment", "Accessibility (WCAG)"],
+      "outcomes": ["Faster time-to-market", "Reliable performance", "Maintainable codebase"]
+    },
+    "app-development": {
+      "title": "App Development",
+      "subtitle": "iOS and Android products from MVP to store release.",
+      "overview": "We design and ship mobile applications with native-quality UX, secure backends, and release pipelines for App Store and Google Play.",
+      "capabilities": ["React Native & cross-platform", "Push notifications & deep links", "Offline-first patterns", "Store submission support", "Analytics & crash monitoring"],
+      "outcomes": ["Shorter MVP-to-store timeline", "Stable releases with CI/CD", "Apps ready for global users"]
+    },
+    "custom-software-development": {
+      "title": "Custom Software Development",
+      "subtitle": "Bespoke systems aligned to your workflows and roadmap.",
+      "overview": "When off-the-shelf tools fall short, we build tailored software — internal tools, customer portals, and integrations that fit how your team actually works.",
+      "capabilities": ["Requirements & discovery", "API-first architecture", "Legacy modernization", "Role-based access control", "Documentation & handover"],
+      "outcomes": ["Software that matches your process", "Reduced manual work", "A platform you own"]
+    },
+    "ux-ui-design": {
+      "title": "UX/UI Design",
+      "subtitle": "Interfaces that communicate trust and drive action.",
+      "overview": "We combine research, wireframing, and visual design to create experiences that are clear, accessible, and conversion-focused across web and mobile.",
+      "capabilities": ["User research & journeys", "Wireframes & prototypes", "Design systems", "RTL/LTR layouts", "Usability testing"],
+      "outcomes": ["Higher engagement", "Faster dev handoff", "Consistent brand experience"]
+    },
+    "dynamics-365-erp": {
+      "title": "Dynamics 365 ERP",
+      "subtitle": "Finance and operations on a unified Microsoft stack.",
+      "overview": "We implement and extend Dynamics 365 ERP to streamline finance, supply chain, and operations with integrations to your existing tools.",
+      "capabilities": ["Implementation & migration", "Module configuration", "Power Platform integration", "Reporting & dashboards", "Training & support"],
+      "outcomes": ["Unified operational data", "Fewer manual reconciliations", "Scalable ERP foundation"]
+    },
+    "dynamics-365-crm": {
+      "title": "Dynamics 365 CRM",
+      "subtitle": "Sales and service CRM tailored to your pipeline.",
+      "overview": "We configure Dynamics 365 Sales and Customer Service to match your funnel, automate follow-ups, and give leadership real visibility.",
+      "capabilities": ["Pipeline & lead management", "Marketing automation hooks", "Custom entities & flows", "Integrations with email/calendar", "Adoption enablement"],
+      "outcomes": ["Cleaner pipeline data", "Faster response times", "Better forecast accuracy"]
+    },
+    "power-apps": {
+      "title": "Power Apps",
+      "subtitle": "Low-code apps that extend Microsoft 365 and Dataverse.",
+      "overview": "We build Power Apps for field teams, approvals, and line-of-business workflows — connected securely to your Microsoft ecosystem.",
+      "capabilities": ["Canvas & model-driven apps", "Dataverse design", "Power Automate flows", "Mobile-first field apps", "Governance & security"],
+      "outcomes": ["Rapid internal tool delivery", "Less spreadsheet chaos", "Governed citizen dev"]
+    },
+    "salesforce": {
+      "title": "Salesforce",
+      "subtitle": "CRM, clouds, and custom objects built for your GTM motion.",
+      "overview": "From Sales Cloud to custom Apex and integrations, we help teams get more from Salesforce without bloated implementations.",
+      "capabilities": ["Sales & Service Cloud setup", "Custom objects & automation", "Integration with ERP/marketing", "Reports & dashboards", "Admin & release management"],
+      "outcomes": ["Higher rep productivity", "Single source of truth", "Integrations that stick"]
+    },
+    "blockchain-cryptography": {
+      "title": "Blockchain & Cryptography",
+      "subtitle": "Secure distributed systems and cryptographic design.",
+      "overview": "We advise and build on blockchain where it adds real value — identity, audit trails, assets, and secure transaction flows with sound cryptography.",
+      "capabilities": ["Smart contract review", "Wallet & custody patterns", "On-chain/off-chain architecture", "Security audits", "Token & NFT platforms"],
+      "outcomes": ["Reduced security risk", "Auditable systems", "Production-ready Web3 features"]
+    },
+    "gen-ai": {
+      "title": "Gen AI",
+      "subtitle": "LLM-powered products and workflows that ship responsibly.",
+      "overview": "We integrate generative AI into your product and operations — RAG, copilots, summarization, and automation with guardrails and observability.",
+      "capabilities": ["RAG & knowledge bases", "Chat & copilot UX", "Model selection & fine-tuning", "Prompt & eval pipelines", "Privacy & compliance review"],
+      "outcomes": ["Faster knowledge work", "Measurable automation gains", "Controlled, monitorable AI"]
+    },
+    "data-analytics": {
+      "title": "Data Analytics",
+      "subtitle": "From raw events to dashboards executives trust.",
+      "overview": "We design data models, pipelines, and BI layers so marketing, product, and leadership see the same numbers — in real time when it matters.",
+      "capabilities": ["Warehouse & ETL design", "Product & marketing analytics", "Executive dashboards", "Attribution modeling", "Data quality monitoring"],
+      "outcomes": ["Single source of metrics", "Faster decisions", "Clear ROI visibility"]
+    },
+    "staff-augmentation": {
+      "title": "Staff Augmentation",
+      "subtitle": "Senior engineers and specialists embedded in your team.",
+      "overview": "Scale delivery without long hiring cycles — our practitioners join your squads with your tools, rituals, and standards from day one.",
+      "capabilities": ["Full-stack & mobile engineers", "QA & DevOps specialists", "Flexible engagement models", "Timezone overlap", "Knowledge transfer"],
+      "outcomes": ["Immediate capacity", "Lower hiring risk", "Velocity without overhead"]
+    },
+    "quality-assurance": {
+      "title": "Quality Assurance",
+      "subtitle": "Testing strategies that protect releases and reputation.",
+      "overview": "We build QA into your SDLC — manual and automated testing, regression suites, and release gates that catch issues before users do.",
+      "capabilities": ["Test strategy & planning", "Automation (E2E, API)", "Performance & load testing", "Mobile device labs", "CI/CD quality gates"],
+      "outcomes": ["Fewer production defects", "Confident releases", "Documented coverage"]
+    },
+    "devops": {
+      "title": "DevOps",
+      "subtitle": "Pipelines, infrastructure, and observability as a discipline.",
+      "overview": "We automate build, test, and deploy paths — infrastructure as code, monitoring, and incident-ready operations for web and mobile products.",
+      "capabilities": ["CI/CD pipelines", "Kubernetes & container ops", "IaC (Terraform, Bicep)", "Monitoring & alerting", "Cost optimization"],
+      "outcomes": ["Faster, safer deploys", "Reduced downtime", "Predictable ops cost"]
+    },
+    "cybersecurity": {
+      "title": "Cybersecurity",
+      "subtitle": "Security reviews, hardening, and compliance support.",
+      "overview": "We assess applications and cloud estates, remediate risks, and help you meet stakeholder and regulatory expectations without blocking delivery.",
+      "capabilities": ["App & cloud pen testing", "Secure SDLC practices", "IAM & secrets management", "Compliance readiness", "Incident response playbooks"],
+      "outcomes": ["Lower breach risk", "Audit-ready posture", "Security embedded in delivery"]
+    },
+    "saas": {
+      "title": "SaaS",
+      "subtitle": "Multi-tenant products built for subscription businesses.",
+      "overview": "We help founders and product teams launch and scale SaaS — billing, onboarding, tenancy, and the ops glue that keeps MRR growing.",
+      "capabilities": ["Multi-tenant architecture", "Billing & subscriptions", "Onboarding & activation", "Admin & analytics", "Scale & reliability planning"],
+      "outcomes": ["Faster product-market fit cycles", "Infrastructure that scales", "Lower churn through UX"]
+    },
+    "ecommerce-design-development": {
+      "title": "Design & Development",
+      "subtitle": "Storefronts and checkout flows built to convert.",
+      "overview": "We design and build e-commerce experiences — Shopify, headless, or custom — with performance, localization, and merchandising in mind.",
+      "capabilities": ["Shopify & headless commerce", "Product & collection UX", "Payment & shipping integrations", "RTL/LTR storefronts", "Launch & migration"],
+      "outcomes": ["Higher conversion rates", "Fast, stable storefronts", "Global-ready catalogs"]
+    },
+    "ecommerce-maintenance-support": {
+      "title": "Maintenance & Support",
+      "subtitle": "Keep your store secure, fast, and merchandised.",
+      "overview": "Ongoing care for commerce platforms — updates, monitoring, campaign landing pages, and integrations so your team can focus on growth.",
+      "capabilities": ["Platform updates & patches", "Uptime monitoring", "Promo & landing pages", "Integration support", "SLA-backed response"],
+      "outcomes": ["Less downtime", "Predictable ops", "Continuous improvement"]
+    }
+  }
+}
