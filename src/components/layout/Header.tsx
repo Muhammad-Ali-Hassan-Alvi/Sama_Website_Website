@@ -1,7 +1,7 @@
 "use client";
 
 import { Globe, Menu, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { NavLink } from "@/components/NavLink";
@@ -9,41 +9,151 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/hooks/useLocale";
 import { localeLabels, supportedLocales, type Locale } from "@/lib/i18n";
+import { GlassLinkColumns, GlassMegaMenu } from "@/components/layout/GlassMegaMenu";
 import { ServicesMegaMenu } from "@/components/layout/ServicesMegaMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { industrySlugs } from "@/content/siteData";
 import { cn } from "@/lib/utils";
 
-type NavItem =
-  | { key: string; to: string; children?: undefined }
-  | { key: string; to: string; children: Array<{ key: string; to: string }> };
+type NavChild = { key: string; to: string; labelKey?: string };
 
-const navItems: NavItem[] = [
-  { key: "home", to: "/" },
-  { key: "services", to: "/services" },
+type NavGroup = {
+  key: string;
+  to: string;
+  mega?: "services";
+  children?: NavChild[];
+};
+
+const primaryNav: NavGroup[] = [
+  { key: "whatWeDo", to: "/services", mega: "services" },
   {
-    key: "work",
-    to: "/case-studies",
+    key: "whoWeHelp",
+    to: "/industries",
     children: [
-      { key: "caseStudies", to: "/case-studies" },
-      { key: "testimonials", to: "/testimonials" },
+      { key: "allIndustries", to: "/industries" },
+      ...industrySlugs.map((slug) => ({
+        key: slug,
+        to: `/industries/${slug}`,
+        labelKey: `industryPages.${slug}.title`,
+      })),
     ],
   },
-  { key: "industries", to: "/industries" },
   {
-    key: "about",
+    key: "whoWeAre",
     to: "/about",
     children: [
       { key: "about", to: "/about" },
       { key: "team", to: "/team" },
-      { key: "careers", to: "/careers" },
       { key: "faq", to: "/faq" },
     ],
   },
-  { key: "contact", to: "/contact" },
+  {
+    key: "howWeDeliver",
+    to: "/#process",
+    children: [
+      { key: "ourProcess", to: "/#process" },
+      { key: "testimonials", to: "/testimonials" },
+      { key: "caseStudies", to: "/case-studies" },
+    ],
+  },
+  {
+    key: "joinUs",
+    to: "/careers",
+    children: [
+      { key: "careers", to: "/careers" },
+      { key: "contact", to: "/contact" },
+    ],
+  },
 ];
 
-function navChildLabel(key: string, t: (k: string) => string) {
-  return t(`nav.${key}`);
+function childLabel(child: NavChild, t: (k: string) => string) {
+  if (child.labelKey) return t(child.labelKey);
+  return t(`nav.${child.key}`);
+}
+
+function PrimaryNavLink({
+  href,
+  label,
+  open,
+  className,
+}: {
+  href: string;
+  label: string;
+  open?: boolean;
+  className?: string;
+}) {
+  return (
+    <NavLink
+      href={href}
+      className={({ isActive }) =>
+        cn(
+          "nav-link-primary",
+          (isActive || open) && "nav-link-primary-active",
+          open && "nav-link-primary-open",
+          className,
+        )
+      }
+    >
+      {label}
+      <ChevronDown className="h-3 w-3 shrink-0" />
+    </NavLink>
+  );
+}
+
+function NavMegaPanel({
+  activeKey,
+  onNavigate,
+}: {
+  activeKey: string;
+  onNavigate?: () => void;
+}) {
+  const { t } = useTranslation();
+  const item = primaryNav.find((nav) => nav.key === activeKey);
+  if (!item) return null;
+
+  if (item.key === "whatWeDo") {
+    return (
+      <ServicesMegaMenu embedded onNavigate={onNavigate} />
+    );
+  }
+
+  if (!item.children) return null;
+
+  const titles: Record<string, string> = {
+    whoWeHelp: t("industriesPage.title"),
+    whoWeAre: t("nav.whoWeAre"),
+    howWeDeliver: t("nav.howWeDeliver"),
+    joinUs: t("nav.joinUs"),
+  };
+
+  const viewAllMap: Record<string, { href: string; label: string } | undefined> = {
+    whoWeHelp: { href: "/industries", label: t("nav.allIndustries") },
+    whoWeAre: { href: "/about", label: t("nav.about") },
+    howWeDeliver: { href: "/#process", label: t("nav.ourProcess") },
+    joinUs: { href: "/careers", label: t("nav.careers") },
+  };
+
+  const viewAll = viewAllMap[item.key];
+  const links = item.children
+    .filter((child) => !(viewAll && child.key === "allIndustries"))
+    .map((child) => ({
+      href: child.to,
+      label: childLabel(child, t),
+    }));
+
+  return (
+    <GlassMegaMenu
+      title={titles[item.key] ?? t(`nav.${item.key}`)}
+      viewAll={viewAll}
+      onNavigate={onNavigate}
+    >
+      <GlassLinkColumns
+        links={links}
+        onNavigate={onNavigate}
+        columns={2}
+      />
+    </GlassMegaMenu>
+  );
 }
 
 export function Header() {
@@ -52,243 +162,154 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileSections, setMobileSections] = useState<Record<string, boolean>>({});
+
+  const hasOpenMega = useMemo(
+    () => primaryNav.some((item) => item.key === activeDropdown),
+    [activeDropdown],
+  );
+
+  const toggleMobileSection = (key: string) => {
+    setMobileSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
   return (
-    <header className="site-header relative sticky top-0 z-50 border-b backdrop-blur-xl">
-      <div
-        onMouseLeave={() => {
-          if (activeDropdown === "services") setActiveDropdown(null);
-        }}
-      >
-        <div className="section-container flex h-[4.75rem] items-center justify-between gap-4">
-        <Link href="/" className="group flex shrink-0 items-center gap-3">
-          <span className="brand-logo flex h-10 w-10 items-center justify-center rounded-2xl text-lg font-extrabold text-white transition group-hover:scale-[1.03]">
-            S
-          </span>
-          <div className="leading-tight">
-            <p className="text-[15px] font-bold tracking-tight">{t("brand.name")}</p>
-            <p className="text-[11px] font-medium text-muted-foreground">{t("brand.short")}</p>
-          </div>
-        </Link>
+    <header className="site-header relative sticky top-0 z-50 border-b">
+      <div onMouseLeave={() => setActiveDropdown(null)}>
+        <div className="section-container relative flex h-[4.25rem] items-center justify-between gap-6">
+          <Link href="/" className="group relative z-10 flex shrink-0 items-center gap-3">
+            <span className="brand-logo flex h-10 w-10 items-center justify-center rounded-2xl text-lg font-extrabold text-white transition group-hover:scale-[1.03]">
+              S
+            </span>
+            <div className="hidden leading-tight 2xl:block">
+              <p className="text-[15px] font-bold tracking-tight">{t("brand.name")}</p>
+              <p className="text-[11px] font-medium text-muted-foreground">{t("brand.short")}</p>
+            </div>
+          </Link>
 
-        <nav className="hidden items-center gap-0.5 xl:flex">
-          {navItems.map((item) =>
-            item.key === "services" ? (
-              <div
-                key={item.key}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("services")}
-              >
-                <NavLink
-                  href={item.to}
-                  className={({ isActive }) =>
-                    cn(
-                      "nav-pill inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium",
-                      isActive ? "nav-pill-active" : "text-foreground/75",
-                    )
-                  }
-                >
-                  {t(`nav.${item.key}`)}
-                  <ChevronDown className="h-3.5 w-3.5 opacity-50" />
-                </NavLink>
-              </div>
-            ) : item.children ? (
+          <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 xl:flex xl:flex-nowrap xl:items-center xl:gap-0.5">
+            {primaryNav.map((item) => (
               <div
                 key={item.key}
                 className="relative"
                 onMouseEnter={() => setActiveDropdown(item.key)}
-                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <NavLink
+                <PrimaryNavLink
                   href={item.to}
-                  className={({ isActive }) =>
-                    cn(
-                      "nav-pill inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium",
-                      isActive ? "nav-pill-active" : "text-foreground/75",
-                    )
-                  }
-                >
-                  {t(`nav.${item.key}`)}
-                  <ChevronDown className="h-3.5 w-3.5 opacity-50" />
-                </NavLink>
-                {activeDropdown === item.key ? (
-                  <div className="absolute start-0 top-full z-50 before:absolute before:-top-2 before:h-2 before:w-full before:content-['']">
-                    <div className="nav-dropdown nav-panel min-w-[190px] overflow-hidden rounded-2xl p-1.5">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.to}
-                          href={child.to}
-                          className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-foreground/80 transition hover:bg-muted hover:text-primary"
-                        >
-                          {navChildLabel(child.key, t)}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
+                  label={t(`nav.${item.key}`)}
+                  open={activeDropdown === item.key}
+                />
               </div>
-            ) : (
-              <NavLink
-                key={item.key}
-                href={item.to}
-                className={({ isActive }) =>
-                  cn(
-                    "nav-pill rounded-full px-3.5 py-2 text-sm font-medium",
-                    isActive ? "nav-pill-active" : "text-foreground/75",
-                  )
-                }
-              >
-                {t(`nav.${item.key}`)}
-              </NavLink>
-            ),
-          )}
-        </nav>
+            ))}
+          </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <ThemeToggle className="bg-card/80" />
-          <div
-            className="relative"
-            onMouseEnter={() => setLangOpen(true)}
-            onMouseLeave={() => setLangOpen(false)}
-          >
-            <Button
-              variant="outline"
-              size="sm"
-              className="bg-card/80"
-              onClick={(e) => {
-                e.stopPropagation();
-                setLangOpen((v) => !v);
-              }}
-              aria-label="Change language"
-              aria-expanded={langOpen}
+          <div className="relative z-10 hidden items-center gap-2 lg:flex">
+            <ThemeToggle className="h-9 w-9 border-border/80 bg-transparent px-0" />
+            <div
+              className="relative"
+              onMouseEnter={() => setLangOpen(true)}
+              onMouseLeave={() => setLangOpen(false)}
             >
-              <Globe />
-              {localeLabels[locale]}
-            </Button>
-            {langOpen ? (
-              <div className="absolute end-0 top-full z-50 pt-2">
-                <div
-                  className="nav-dropdown nav-panel min-w-[148px] overflow-hidden rounded-xl p-1"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {supportedLocales.map((code) => (
-                    <button
-                      key={code}
-                      type="button"
-                      onClick={() => {
-                        setLocale(code as Locale);
-                        setLangOpen(false);
-                      }}
-                      className={cn(
-                        "flex w-full rounded-lg px-3 py-2 text-start text-sm transition hover:bg-muted",
-                        locale === code && "bg-primary/10 font-semibold text-primary",
-                      )}
-                    >
-                      {localeLabels[code]}
-                    </button>
-                  ))}
+              <Button
+                variant="outline"
+                size="sm"
+                className="nav-link-primary h-9 shrink-0 rounded-md border-border/80 bg-transparent px-3 whitespace-nowrap normal-case tracking-normal"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLangOpen((v) => !v);
+                }}
+                aria-label="Change language"
+                aria-expanded={langOpen}
+              >
+                <Globe className="h-3.5 w-3.5" />
+                {localeLabels[locale]}
+              </Button>
+              {langOpen ? (
+                <div className="absolute end-0 top-full z-50 pt-2">
+                  <div className="nav-glass-panel-compact min-w-[148px] overflow-hidden rounded-xl p-1.5">
+                    {supportedLocales.map((code) => (
+                      <button
+                        key={code}
+                        type="button"
+                        onClick={() => {
+                          setLocale(code as Locale);
+                          setLangOpen(false);
+                        }}
+                        className={cn(
+                          "flex w-full rounded-lg px-3 py-2 text-start text-sm transition hover:bg-foreground/5",
+                          locale === code && "bg-primary/10 font-semibold text-primary",
+                        )}
+                      >
+                        {localeLabels[code]}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ) : null}
+              ) : null}
+            </div>
+            <Button
+              asChild
+              variant="outline"
+              className="nav-link-primary h-9 shrink-0 rounded-md border-foreground/20 bg-transparent whitespace-nowrap hover:bg-foreground hover:text-background"
+            >
+              <Link href="/contact">{t("nav.cta")}</Link>
+            </Button>
           </div>
-          <Button asChild className="shadow-md shadow-primary/15">
-            <Link href="/contact">{t("nav.cta")}</Link>
-          </Button>
+
+          <button
+            type="button"
+            className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card xl:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border bg-card xl:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-
-        {activeDropdown === "services" ? (
-          <div className="hidden border-t border-border bg-card shadow-2xl xl:block">
-            <div className="section-container py-10">
-              <ServicesMegaMenu />
+        {hasOpenMega ? (
+          <div className="nav-glass-panel hidden xl:block">
+            <div className="section-container py-10 lg:py-12">
+              <NavMegaPanel activeKey={activeDropdown!} />
             </div>
           </div>
         ) : null}
       </div>
 
       {open ? (
-        <div className="max-h-[80vh] overflow-y-auto border-t bg-card px-4 py-4 xl:hidden">
+        <div className="max-h-[85vh] overflow-y-auto border-t bg-card px-4 py-4 xl:hidden">
           <nav className="flex flex-col gap-1">
-            <NavLink
-              href="/"
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                cn(
-                  "rounded-xl px-4 py-3 text-sm font-medium",
-                  isActive ? "bg-primary/10 text-primary" : "text-foreground/80",
-                )
-              }
-            >
-              {t("nav.home")}
-            </NavLink>
-
-            <button
-              type="button"
-              onClick={() => setMobileServicesOpen((v) => !v)}
-              className="flex items-center justify-between rounded-xl px-4 py-3 text-start text-sm font-medium text-foreground/80"
-            >
-              {t("nav.services")}
-              <ChevronDown
-                className={cn("h-4 w-4 transition", mobileServicesOpen && "rotate-180")}
-              />
-            </button>
-            {mobileServicesOpen ? (
-              <div className="mb-2 rounded-2xl border border-border bg-background p-4">
-                <ServicesMegaMenu
-                  showTitle={false}
-                  onNavigate={() => {
-                    setOpen(false);
-                    setMobileServicesOpen(false);
-                  }}
-                />
+            {primaryNav.map((item) => (
+              <div key={item.key} className="border-b border-border/60 last:border-0">
+                <button
+                  type="button"
+                  onClick={() => toggleMobileSection(item.key)}
+                  className="flex w-full items-center justify-between py-3 text-start text-[11px] font-semibold uppercase tracking-[0.16em]"
+                >
+                  {t(`nav.${item.key}`)}
+                  <ChevronDown
+                    className={cn(
+                      "h-4 w-4 transition",
+                      mobileSections[item.key] && "rotate-180",
+                    )}
+                  />
+                </button>
+                {mobileSections[item.key] ? (
+                  <div className="nav-glass-panel-compact mb-4 rounded-2xl p-4">
+                    {item.mega === "services" ? (
+                      <ServicesMegaMenu embedded onNavigate={() => setOpen(false)} />
+                    ) : item.children ? (
+                      <GlassLinkColumns
+                        links={item.children.map((child) => ({
+                          href: child.to,
+                          label: childLabel(child, t),
+                        }))}
+                        onNavigate={() => setOpen(false)}
+                      />
+                    ) : null}
+                  </div>
+                ) : null}
               </div>
-            ) : null}
-
-            {navItems
-              .filter((item) => item.key !== "home" && item.key !== "services")
-              .flatMap((item) =>
-                item.children
-                  ? item.children.map((child) => (
-                      <NavLink
-                        key={child.to}
-                        href={child.to}
-                        onClick={() => setOpen(false)}
-                        className={({ isActive }) =>
-                          cn(
-                            "rounded-xl px-4 py-3 text-sm font-medium",
-                            isActive ? "bg-primary/10 text-primary" : "text-foreground/80",
-                          )
-                        }
-                      >
-                        {navChildLabel(child.key, t)}
-                      </NavLink>
-                    ))
-                  : [
-                      <NavLink
-                        key={item.to}
-                        href={item.to}
-                        onClick={() => setOpen(false)}
-                        className={({ isActive }) =>
-                          cn(
-                            "rounded-xl px-4 py-3 text-sm font-medium",
-                            isActive ? "bg-primary/10 text-primary" : "text-foreground/80",
-                          )
-                        }
-                      >
-                        {t(`nav.${item.key}`)}
-                      </NavLink>,
-                    ],
-              )}
+            ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2 border-t pt-4">
             <ThemeToggle className="w-full justify-center bg-card" />

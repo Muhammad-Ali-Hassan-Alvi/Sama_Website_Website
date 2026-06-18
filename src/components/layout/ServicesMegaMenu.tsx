@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { serviceMenuColumns, type ServiceMenuBlock } from "@/content/siteData";
+import { GlassMegaMenu } from "@/components/layout/GlassMegaMenu";
 import { cn } from "@/lib/utils";
 
 type ServicesMegaMenuProps = {
   className?: string;
   onNavigate?: () => void;
-  showTitle?: boolean;
+  embedded?: boolean;
 };
 
 function MenuBlock({
@@ -26,7 +27,7 @@ function MenuBlock({
         <Link
           href={`/services/${block.slug}`}
           onClick={onNavigate}
-          className="text-base font-bold text-foreground transition hover:text-primary"
+          className="nav-glass-link text-base font-semibold"
         >
           {t(`servicePages.${block.slug}.title`)}
         </Link>
@@ -36,16 +37,16 @@ function MenuBlock({
 
   return (
     <div>
-      <p className="mb-3 text-base font-bold text-foreground">
+      <p className="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-foreground">
         {t(`serviceCategories.${block.categoryKey}.title`)}
       </p>
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {block.slugs.map((slug) => (
           <li key={slug}>
             <Link
               href={`/services/${slug}`}
               onClick={onNavigate}
-              className="text-sm text-foreground/75 transition hover:text-primary"
+              className="nav-glass-link block py-1.5 text-[0.9375rem] font-medium"
             >
               {t(`servicePages.${slug}.title`)}
             </Link>
@@ -56,42 +57,53 @@ function MenuBlock({
   );
 }
 
+function ServicesMenuGrid({
+  onNavigate,
+  className,
+}: {
+  onNavigate?: () => void;
+  className?: string;
+}) {
+  return (
+    <div className={cn("grid gap-10 md:grid-cols-2 md:gap-x-16 md:gap-y-8", className)}>
+      {serviceMenuColumns.map((column, colIndex) => (
+        <div key={colIndex} className="space-y-8">
+          {column.map((block, blockIndex) => (
+            <MenuBlock
+              key={`${colIndex}-${blockIndex}`}
+              block={block}
+              onNavigate={onNavigate}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function ServicesMegaMenu({
   className,
   onNavigate,
-  showTitle = true,
+  embedded = false,
 }: ServicesMegaMenuProps) {
   const { t } = useTranslation();
 
+  if (embedded) {
+    return (
+      <GlassMegaMenu
+        title={t("services.capabilitiesTitle")}
+        viewAll={{ href: "/services", label: t("services.viewAll") }}
+        onNavigate={onNavigate}
+        className={className}
+      >
+        <ServicesMenuGrid onNavigate={onNavigate} />
+      </GlassMegaMenu>
+    );
+  }
+
   return (
     <div className={cn(className)}>
-      {showTitle ? (
-        <p className="mb-8 font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          {t("services.capabilitiesTitle")}
-        </p>
-      ) : null}
-      <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-        {serviceMenuColumns.map((column, colIndex) => (
-          <div key={colIndex} className="space-y-8">
-            {column.map((block, blockIndex) => (
-              <MenuBlock
-                key={`${colIndex}-${blockIndex}`}
-                block={block}
-                onNavigate={onNavigate}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="mt-8 border-t border-border pt-6">
-        <Link
-          href="/services"
-          onClick={onNavigate}
-          className="text-sm font-semibold text-primary transition hover:underline"
-        >
-          {t("services.viewAll")} →
-        </Link>
-      </div>
+      <ServicesMenuGrid onNavigate={onNavigate} />
     </div>
   );
 }

@@ -7,11 +7,17 @@
   },
   "brand": {
     "name": "Sama Digital",
-    "tagline": "A global software studio delivering product engineering, digital platforms, and measurable growth for ambitious organizations.",
+    "tagline": "Product engineering and digital growth for startups, enterprises, and teams across the GCC.",
     "short": "Software Studio"
   },
   "nav": {
     "home": "Home",
+    "whatWeDo": "What we do",
+    "whoWeHelp": "Who we help",
+    "whoWeAre": "Who we are",
+    "howWeDeliver": "How we deliver",
+    "joinUs": "Join Sama",
+    "ourProcess": "Our process",
     "services": "Services",
     "industries": "Industries",
     "work": "Work",
@@ -22,30 +28,38 @@
     "faq": "FAQ",
     "testimonials": "Testimonials",
     "contact": "Contact",
-    "cta": "Start a project",
-    "caseStudies": "Case Studies",
-    "successStories": "Success Stories"
+    "cta": "Let's talk",
+    "caseStudies": "Case studies",
+    "successStories": "Success stories",
+    "allIndustries": "All industries"
   },
   "hero": {
-    "eyebrow": "Remote-first · Global delivery",
     "headlines": [
       { "top": "Engineering", "bottom": "Digital excellence" },
-      { "top": "Products built for", "bottom": "A global market" },
-      { "top": "Strategy, design,", "bottom": "And engineering" },
+      { "top": "From startup", "bottom": "To enterprise" },
+      { "top": "Built for the", "bottom": "GCC & beyond" },
       { "top": "Ship with", "bottom": "Confidence" }
     ],
-    "description": "Sama Digital partners with founders and enterprise teams to design, build, and scale web products, platforms, and growth programs — with senior talent, clear accountability, and delivery across time zones.",
+    "description": "Sama Digital partners with growing startups and enterprise teams across the GCC to design, build, and scale web products, platforms, and growth programs — with senior talent, Arabic/English delivery, and clear accountability.",
     "primaryCta": "Schedule a consultation",
     "secondaryCta": "View case studies",
     "manifesto": "We operate as an extension of your team — senior practitioners on every engagement, transparent communication, and standards we apply to our own products.",
-    "promises": ["Senior leadership on every project", "Structured weekly delivery", "Global timezone coverage"],
-    "cardTitle": "Core capabilities",
-    "cardItems": ["Product & platform engineering", "Web applications & APIs", "Performance marketing & SEO"],
-    "floatingTagline": "Precision engineering. Disciplined delivery. Built for organizations that value outcomes over optics."
+    "promises": ["Startup speed, enterprise standards", "Arabic & English from day one", "GCC timezone alignment"],
+    "cardTitle": "End-to-end capabilities",
+    "cardItems": [
+      "Digital transformation & custom software",
+      "Enterprise apps — Dynamics, Salesforce & Power Apps",
+      "Gen AI, data analytics & intelligent automation",
+      "Cloud infrastructure, DevOps & cybersecurity",
+      "E-commerce design, build & ongoing support",
+      "Dedicated teams — staff augmentation & QA"
+    ],
+    "techStack": ["React", "Next.js", "Node.js", "Gen AI", "PostgreSQL", "Shopify"],
+    "floatingTagline": "Full-stack engineering · Arabic & English · Startups, scale-ups & enterprise across the GCC"
   },
   "clients": {
-    "title": "Trusted by teams worldwide",
-    "subtitle": "From venture-backed startups to established enterprises — we deliver remotely, with consistency and rigor."
+    "title": "Platforms we build on",
+    "subtitle": "We partner with startups shipping their first product and enterprises modernizing platforms across the UAE, Saudi Arabia, and the wider GCC."
   },
   "services": {
     "eyebrow": "Services",
@@ -88,8 +102,8 @@
     "subtitle": "We unite strategy, design, and engineering under one roof — so your digital initiatives move forward with clarity, velocity, and accountability.",
     "items": {
       "bilingual": {
-        "title": "Global-ready by design",
-        "description": "Multilingual architecture, RTL/LTR layouts, and locale-aware content — integrated from inception, not retrofitted."
+        "title": "GCC-ready by design",
+        "description": "Arabic and English architecture, RTL/LTR layouts, and locale-aware campaigns — built for how Gulf markets actually buy and build."
       },
       "speed": {
         "title": "Disciplined velocity",
@@ -125,9 +139,9 @@
     }
   },
   "featuredWork": {
-    "eyebrow": "Case studies",
-    "title": "Proven outcomes across industries",
-    "subtitle": "Selected engagements demonstrating measurable impact, technical rigor, and cross-market execution."
+    "eyebrow": "Sample work",
+    "title": "The kind of outcomes we pursue",
+    "subtitle": "Illustrative case studies — we'll replace these with real client stories as we ship."
   },
   "openSource": {
     "eyebrow": "Open source",
@@ -155,7 +169,7 @@
   "testimonials": {
     "eyebrow": "Client perspectives",
     "title": "What our partners say",
-    "subtitle": "Feedback from organizations that chose a focused studio over a traditional agency model.",
+    "subtitle": "Feedback from startups and enterprise teams building across the Gulf.",
     "items": [
       {
         "quote": "Sama rebuilt our acquisition funnel and reduced cost-per-lead by 38% within the first quarter — with full Arabic and English parity.",
@@ -180,25 +194,25 @@
     "button": "Contact us"
   },
   "footer": {
-    "description": "Sama Digital is a global software studio — engineering products, platforms, and growth systems for organizations that demand precision and accountability.",
+    "description": "Sama Digital engineers products, platforms, and growth systems for startups and enterprises across the GCC — with precision, bilingual delivery, and accountability.",
     "quickLinks": "Quick links",
     "company": "Company",
     "contact": "Contact",
     "email": "hello@sama.digital",
-    "phone": "Remote worldwide",
-    "location": "Remote · Worldwide",
+    "phone": "GCC · Remote delivery",
+    "location": "UAE · Saudi · GCC",
     "rights": "All rights reserved."
   },
   "about": {
     "title": "About Sama Digital",
-    "subtitle": "A software studio built for modern organizations",
-    "story": "Sama Digital was founded on a straightforward principle: organizations deserve a technology partner that combines senior expertise with transparent delivery. We engineer products, platforms, and growth programs for teams operating in competitive, global markets.",
+    "subtitle": "A software studio focused on the Gulf — from startup launches to enterprise platforms",
+    "story": "Sama Digital was founded to serve a clear gap in the GCC market: teams need a partner who combines senior engineering with Arabic/English delivery — whether you're a startup shipping your first product or an enterprise modernizing at scale.",
     "missionTitle": "Our mission",
-    "mission": "Enable ambitious organizations to ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
+    "mission": "Help startups and enterprises across the GCC ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
     "valuesTitle": "Our principles",
     "values": [
       "Senior talent on every engagement.",
-      "Global capability without geographic limitation.",
+      "Deep GCC market understanding — bilingual by default.",
       "Craft and accountability in equal measure."
     ],
     "beliefs": [
@@ -216,7 +230,9 @@
       "company": "Company",
       "message": "Tell us about your project",
       "submit": "Send message",
-      "success": "Thanks — we'll be in touch soon."
+      "sending": "Sending…",
+      "success": "Thanks — we'll be in touch soon.",
+      "error": "Something went wrong. Please try again or email us directly."
     }
   },
   "servicesPage": {
@@ -229,7 +245,7 @@
   },
   "industriesPage": {
     "title": "Industries",
-    "subtitle": "Sector playbooks for teams building globally.",
+    "subtitle": "Sector playbooks for startups and enterprises building in the Gulf.",
     "detailEyebrow": "Industry expertise",
     "challenges": "Common challenges",
     "solutions": "How we help"
@@ -278,7 +294,7 @@
     "noor-retail": {
       "title": "Noor Retail",
       "subtitle": "Arabic storefront relaunch with 38% lower CPL",
-      "client": "Noor Retail · Global",
+      "client": "Noor Retail · UAE",
       "service": "Digital Marketing",
       "challenge": "English campaigns performed well but Arabic landing pages converted at half the rate, inflating overall acquisition costs.",
       "approach": "We rebuilt Arabic product pages with RTL-first design, rewrote ad copy with native reviewers, and restructured Meta campaigns by language.",
@@ -288,7 +304,7 @@
     "fleetpulse": {
       "title": "FleetPulse",
       "subtitle": "Bilingual Next.js dashboard in six weeks",
-      "client": "FleetPulse · Remote",
+      "client": "FleetPulse · Saudi Arabia",
       "service": "Next.js Development",
       "challenge": "FleetPulse needed a customer dashboard supporting Arabic RTL and English LTR without maintaining two separate codebases.",
       "approach": "We shipped a Next.js app with locale routing, shared component library, and accessible UI patterns tested in both directions.",
@@ -297,8 +313,8 @@
     },
     "gulfpay": {
       "title": "PayFlow",
-      "subtitle": "Product marketing for a global fintech launch",
-      "client": "PayFlow · Worldwide",
+      "subtitle": "Product marketing for a GCC fintech launch",
+      "client": "PayFlow · GCC",
       "service": "Digital Marketing + Web",
       "challenge": "Launching a payments product required trust-heavy messaging across multiple locales without losing brand premium.",
       "approach": "We paired regulatory-aware copywriters with a bright marketing site and phased ad rollout across Meta and Google.",
@@ -308,30 +324,30 @@
   },
   "careersPage": {
     "title": "Careers",
-    "subtitle": "Join a remote-first studio building products for the open web.",
+    "subtitle": "Join a GCC-focused studio building products for startups and enterprises.",
     "openRoles": "Open roles",
     "apply": "Apply now",
     "location": "Location",
     "type": "Type",
     "perksTitle": "Why work with us",
-    "perks": ["Remote-first worldwide", "Small team, real ownership", "Multilingual projects welcome", "Learning budget & conferences"]
+    "perks": ["GCC-friendly remote & hybrid", "Startup and enterprise projects", "Arabic/English from day one", "Learning budget & conferences"]
   },
   "careerPages": {
     "senior-react-dev": {
       "title": "Senior React Developer",
-      "location": "Remote · Worldwide",
+      "location": "GCC · Remote",
       "type": "Full-time",
-      "description": "Build React and Next.js products for clients around the globe. You'll own features end-to-end in a small senior team."
+      "description": "Build React and Next.js products for startup and enterprise clients across the Gulf. You'll own features end-to-end in a small senior team."
     },
     "growth-marketer": {
       "title": "Growth Marketer",
-      "location": "Remote · Worldwide",
+      "location": "Riyadh / Remote · GCC",
       "type": "Full-time",
-      "description": "Run Meta and Google campaigns for global audiences. You'll optimize funnels and report on measurable growth."
+      "description": "Run Meta and Google campaigns for Arabic and English audiences across the GCC. You'll optimize funnels and report on measurable growth."
     },
     "arabic-copywriter": {
       "title": "Multilingual Copywriter",
-      "location": "Remote · Worldwide",
+      "location": "GCC · Remote",
       "type": "Contract",
       "description": "Write campaign copy, landing pages, and product messaging across English, Arabic, and other locales."
     }
@@ -342,10 +358,10 @@
     "join": "We're hiring"
   },
   "teamMembers": {
-    "layla": { "name": "Layla Al-Rashid", "role": "Head of Strategy", "bio": "Campaign strategist for retail and SaaS brands across Europe and the Middle East." },
-    "omar": { "name": "Omar Hassan", "role": "Lead Engineer", "bio": "Full-stack developer specializing in MERN and Next.js with i18n architecture." },
-    "sarah": { "name": "Sarah Mitchell", "role": "Design Director", "bio": "Product designer focused on accessible, locale-aware interfaces that feel premium." },
-    "ahmed": { "name": "Ahmed Farouk", "role": "Growth Lead", "bio": "Performance marketer with deep Meta and Google expertise across global markets." }
+    "layla": { "name": "Layla Al-Rashid", "role": "Head of Strategy", "bio": "Campaign strategist for retail and SaaS brands across the UAE, Saudi Arabia, and the wider GCC." },
+    "omar": { "name": "Omar Hassan", "role": "Lead Engineer", "bio": "Full-stack developer specializing in MERN and Next.js with bilingual i18n architecture for Gulf markets." },
+    "sarah": { "name": "Sarah Mitchell", "role": "Design Director", "bio": "Product designer focused on accessible, RTL/LTR interfaces for startups and enterprises in the region." },
+    "ahmed": { "name": "Ahmed Farouk", "role": "Growth Lead", "bio": "Performance marketer with deep Meta and Google expertise across GCC markets." }
   },
   "pricingPage": {
     "title": "Pricing",
@@ -359,7 +375,7 @@
     "starter": {
       "name": "Starter",
       "price": "$2,500",
-      "description": "For early-stage teams testing new channels.",
+      "description": "For GCC startups and scale-ups testing new channels.",
       "features": ["Single or multi-locale setup", "Landing page + ads setup", "Monthly performance report", "Email support"]
     },
     "growth": {
@@ -371,7 +387,7 @@
     "enterprise": {
       "name": "Enterprise",
       "price": "Custom",
-      "description": "For complex products, multi-market rollouts, and dedicated squads.",
+      "description": "For enterprise teams rolling out platforms across multiple Gulf markets.",
       "features": ["Dedicated team", "Custom MERN/Next.js builds", "SLA & priority support", "Multi-market expansion", "Quarterly business reviews"]
     }
   },
@@ -379,7 +395,7 @@
     "title": "FAQ",
     "subtitle": "Answers to common questions about working with Sama Digital.",
     "items": [
-      { "q": "Do you work with clients internationally?", "a": "Yes. We are a remote-first studio serving clients across Europe, the Americas, Asia, and the Middle East. We align communication and delivery cadence to your timezone." },
+      { "q": "Do you work with startups and enterprises in the GCC?", "a": "Yes. We specialize in partnerships with growing startups and enterprise teams across the UAE, Saudi Arabia, Qatar, and the wider Gulf — with bilingual delivery and timezone alignment." },
       { "q": "Can you support both marketing and engineering?", "a": "Yes. Many clients engage us for integrated delivery — from acquisition strategy through platform engineering — ensuring alignment across disciplines." },
       { "q": "How do you approach multilingual products?", "a": "We architect for every target locale from the outset — layout, routing, content, and QA — with native-language review at each stage." },
       { "q": "What are typical project timelines?", "a": "Campaign launches are typically live within 2–4 weeks. Platform and application projects range from 6–12 weeks depending on scope. We provide a detailed timeline in every proposal." },

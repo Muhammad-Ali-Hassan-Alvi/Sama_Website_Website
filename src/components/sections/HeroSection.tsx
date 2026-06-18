@@ -1,12 +1,18 @@
 "use client";
 
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { SiNextdotjs, SiNodedotjs, SiReact } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOpenai,
+  SiPostgresql,
+  SiReact,
+  SiShopify,
+} from "react-icons/si";
 import { MotionInView } from "@/components/MotionInView";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -17,7 +23,17 @@ export function HeroSection() {
     bottom: string;
   }>;
   const cardItems = t("hero.cardItems", { returnObjects: true }) as string[];
+  const techStack = t("hero.techStack", { returnObjects: true }) as string[];
   const promises = t("hero.promises", { returnObjects: true }) as string[];
+
+  const techIcons = [
+    { Icon: SiReact, color: "#61DAFB" },
+    { Icon: SiNextdotjs, color: "currentColor" },
+    { Icon: SiNodedotjs, color: "#68A063" },
+    { Icon: SiOpenai, color: "#412991" },
+    { Icon: SiPostgresql, color: "#4169E1" },
+    { Icon: SiShopify, color: "#96BF48" },
+  ] as const;
 
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -42,18 +58,11 @@ export function HeroSection() {
       <div aria-hidden className="hero-orb hero-orb-b" />
 
       <div className="section-container relative">
-        <MotionInView className="overflow-visible">
-          <Badge variant="secondary" className="hero-eyebrow mb-6 shadow-sm">
-            <Sparkles className="h-3.5 w-3.5 shrink-0" />
-            <span>{t("hero.eyebrow")}</span>
-          </Badge>
-        </MotionInView>
-
         <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <div className="min-w-0 overflow-visible pe-0 lg:pe-4">
             <h1
               aria-live="polite"
-              className="hero-headline font-display text-[clamp(2.25rem,5.5vw,4.5rem)] font-extrabold transition-[opacity,transform,filter] duration-500"
+              className="hero-headline transition-[opacity,transform,filter] duration-500"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(12px)",
@@ -106,32 +115,30 @@ export function HeroSection() {
                       <p className="text-sm font-bold tracking-wide text-card-foreground">
                         {t("hero.cardTitle")}
                       </p>
-                      <ul className="mt-5 space-y-3">
+                      <ul className="mt-5 grid gap-2.5 sm:grid-cols-2 sm:gap-x-4">
                         {cardItems.map((item) => (
                           <li
                             key={item}
-                            className="flex items-center gap-3 text-sm font-medium text-card-foreground"
+                            className="flex items-start gap-2.5 text-[0.8125rem] font-medium leading-snug text-card-foreground"
                           >
-                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15">
-                              <span className="bg-brand-dot h-2 w-2 rounded-full" />
+                            <span className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                              <span className="bg-brand-dot h-1.5 w-1.5 rounded-full" />
                             </span>
                             {item}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="grid grid-cols-3 gap-3 bg-muted/50 p-5 md:p-6">
-                      {[
-                        { Icon: SiReact, label: "React", color: "#61DAFB" },
-                        { Icon: SiNodedotjs, label: "Node", color: "#68A063" },
-                        { Icon: SiNextdotjs, label: "Next.js", color: "currentColor" },
-                      ].map(({ Icon, label, color }) => (
+                    <div className="grid grid-cols-3 gap-2 bg-muted/50 p-4 md:p-5">
+                      {techIcons.map(({ Icon, color }, i) => (
                         <div
-                          key={label}
-                          className="surface-card-hover flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-4 text-center"
+                          key={techStack[i] ?? i}
+                          className="surface-card-hover flex flex-col items-center gap-1.5 rounded-xl border border-border bg-card p-3 text-center"
                         >
-                          <Icon style={{ color }} className="h-7 w-7" />
-                          <span className="text-xs font-semibold text-foreground">{label}</span>
+                          <Icon style={{ color }} className="h-6 w-6" />
+                          <span className="text-[0.6875rem] font-semibold leading-tight text-foreground">
+                            {techStack[i]}
+                          </span>
                         </div>
                       ))}
                     </div>

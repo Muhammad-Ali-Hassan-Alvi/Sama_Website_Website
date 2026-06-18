@@ -63,7 +63,7 @@ export function ProcessSection() {
 
   if (reduceMotion) {
     return (
-      <section className="section-shell">
+      <section id="process" className="section-shell">
         <div className="section-container">
           <div className="text-center">
             <Badge>{t("process.eyebrow")}</Badge>
@@ -82,7 +82,7 @@ export function ProcessSection() {
   }
 
   return (
-    <section ref={containerRef} className="relative h-[220vh]">
+    <section id="process" ref={containerRef} className="relative h-[220vh]">
       <div className="sticky top-20 flex h-[calc(100vh-5rem)] items-center md:top-24">
         <div className="section-container w-full py-8">
           <div className="text-center">

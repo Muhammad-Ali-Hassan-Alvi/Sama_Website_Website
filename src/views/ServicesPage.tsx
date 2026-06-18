@@ -18,7 +18,7 @@ export function ServicesPage() {
       />
       <section className="section-shell border-b border-border bg-card/50">
         <div className="section-container">
-          <ServicesMegaMenu showTitle={false} />
+          <ServicesMegaMenu />
         </div>
       </section>
       <ProcessSection />
