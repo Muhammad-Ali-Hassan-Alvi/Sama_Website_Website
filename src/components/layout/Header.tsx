@@ -253,7 +253,7 @@ export function Header() {
 
           <button
             type="button"
-            className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card xl:hidden"
+            className="mobile-menu-toggle relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-foreground xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -271,14 +271,14 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="max-h-[85vh] overflow-y-auto border-t bg-card px-4 py-4 xl:hidden">
+        <div className="mobile-nav-drawer max-h-[85vh] overflow-y-auto border-t bg-card px-4 py-4 text-card-foreground xl:hidden">
           <nav className="flex flex-col gap-1">
             {primaryNav.map((item) => (
               <div key={item.key} className="border-b border-border/60 last:border-0">
                 <button
                   type="button"
                   onClick={() => toggleMobileSection(item.key)}
-                  className="flex w-full items-center justify-between py-3 text-start text-[11px] font-semibold uppercase tracking-[0.16em]"
+                  className="flex w-full items-center justify-between py-3 text-start text-[11px] font-semibold uppercase tracking-[0.16em] text-inherit"
                 >
                   {t(`nav.${item.key}`)}
                   <ChevronDown

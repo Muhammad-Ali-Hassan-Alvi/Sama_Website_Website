@@ -147,6 +147,13 @@
       "overview": "Ongoing care for commerce platforms — updates, monitoring, campaign landing pages, and integrations so your team can focus on growth.",
       "capabilities": ["Platform updates & patches", "Uptime monitoring", "Promo & landing pages", "Integration support", "SLA-backed response"],
       "outcomes": ["Less downtime", "Predictable ops", "Continuous improvement"]
+    },
+    "google-business-profile": {
+      "title": "Google Business Profile",
+      "subtitle": "Get found on Search and Maps — and turn views into customers.",
+      "overview": "We set up, optimize, and maintain your Google Business Profile (GMB) so local customers discover you on Search and Maps with accurate info, reviews, and posts.",
+      "capabilities": ["Profile setup & verification", "Category & keyword optimization", "Photos, posts & Q&A", "Review response workflows", "Insights & local SEO reporting"],
+      "outcomes": ["More local discovery", "Stronger trust signals", "Measurable profile performance"]
     }
   }
 }
