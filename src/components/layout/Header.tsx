@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/hooks/useLocale";
 import { localeLabels, supportedLocales, type Locale } from "@/lib/i18n";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { GlassLinkColumns, GlassMegaMenu } from "@/components/layout/GlassMegaMenu";
 import { ServicesMegaMenu } from "@/components/layout/ServicesMegaMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
@@ -176,15 +177,9 @@ export function Header() {
   return (
     <header className="site-header relative sticky top-0 z-50 border-b">
       <div onMouseLeave={() => setActiveDropdown(null)}>
-        <div className="section-container relative flex h-[4.25rem] items-center justify-between gap-6">
-          <Link href="/" className="group relative z-10 flex shrink-0 items-center gap-3">
-            <span className="brand-logo flex h-10 w-10 items-center justify-center rounded-2xl text-lg font-extrabold text-white transition group-hover:scale-[1.03]">
-              S
-            </span>
-            <div className="hidden leading-tight 2xl:block">
-              <p className="text-[15px] font-bold tracking-tight">{t("brand.name")}</p>
-              <p className="text-[11px] font-medium text-muted-foreground">{t("brand.short")}</p>
-            </div>
+        <div className="section-container relative flex h-[5.75rem] items-center justify-between gap-6">
+          <Link href="/" className="group relative z-10 flex shrink-0 items-center">
+            <BrandLogo priority size="xl" />
           </Link>
 
           <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 xl:flex xl:flex-nowrap xl:items-center xl:gap-0.5">
@@ -338,7 +333,7 @@ export function Header() {
 export function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/97141234567"
+      href="https://wa.me/923449993391"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 end-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition hover:scale-105"

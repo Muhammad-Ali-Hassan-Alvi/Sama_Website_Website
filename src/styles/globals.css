@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: 38 33% 97%;
+  --background: 60 6% 96%;
   --foreground: 24 10% 10%;
   --card: 0 0% 100%;
   --card-foreground: 24 10% 10%;
@@ -13,23 +13,24 @@
   --primary-foreground: 0 0% 100%;
   --secondary: 24 10% 18%;
   --secondary-foreground: 0 0% 100%;
-  --muted: 0 43% 96%;
+  --muted: 40 6% 94%;
   --muted-foreground: 25 6% 42%;
-  --accent: 0 100% 96%;
+  --accent: 40 8% 95%;
   --accent-foreground: 24 10% 10%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 30% 92%;
-  --input: 0 30% 92%;
+  --border: 40 8% 90%;
+  --input: 40 8% 90%;
   --ring: 4 90% 68%;
   --radius: 0.85rem;
 
   --brand-bittersweet: #f86b64;
-  --brand-misty: #ffeded;
+  --brand-misty: #f6f6f3;
   --brand-ink: #0c0a09;
   --brand-slate: #292524;
-  --brand-cream: #ffeded;
+  --brand-cream: #f6f6f3;
   --brand-rose-light: #ffb4a8;
+  --brand-paper-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
 .dark {
@@ -105,9 +106,10 @@ body {
   min-height: 100vh;
   background-color: var(--brand-cream);
   background-image:
-    linear-gradient(rgba(248, 107, 100, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(248, 107, 100, 0.04) 1px, transparent 1px);
-  background-size: 52px 52px;
+    var(--brand-paper-grain),
+    linear-gradient(rgba(248, 107, 100, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 107, 100, 0.03) 1px, transparent 1px);
+  background-size: auto, 52px 52px, 52px 52px;
   color: var(--brand-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -121,9 +123,54 @@ body {
 }
 
 .site-header {
-  border-color: hsl(var(--border));
-  background: hsl(var(--card) / 0.92);
-  backdrop-filter: blur(16px);
+  border-color: color-mix(in srgb, hsl(var(--border)) 65%, transparent);
+  background: color-mix(in srgb, var(--brand-cream) 78%, transparent);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, hsl(var(--foreground)) 5%, transparent);
+}
+
+.dark .site-header {
+  border-color: color-mix(in srgb, hsl(var(--foreground)) 14%, transparent);
+  background: color-mix(in srgb, hsl(240 6% 72%) 78%, transparent);
+  backdrop-filter: blur(22px) saturate(1.25);
+  -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 35%, transparent),
+    0 8px 32px rgba(0, 0, 0, 0.18);
+  color: hsl(240 12% 16%);
+}
+
+.dark .site-header .nav-link-primary {
+  color: hsl(240 12% 16%);
+}
+
+.dark .site-header .nav-link-primary:hover,
+.dark .site-header .nav-link-primary-active,
+.dark .site-header .nav-link-primary-open {
+  color: hsl(var(--primary));
+}
+
+.dark .site-header .nav-glass-link,
+.dark .site-header .nav-glass-panel h2,
+.dark .site-header .nav-glass-panel .text-foreground,
+.dark .site-header .nav-glass-panel .font-semibold {
+  color: hsl(240 12% 18%);
+}
+
+.dark .site-header .nav-glass-panel .nav-glass-cta {
+  color: hsl(var(--primary));
+}
+
+.dark .site-header button.border-border,
+.dark .site-header .border-foreground\/20 {
+  border-color: color-mix(in srgb, hsl(240 12% 16%) 22%, transparent) !important;
+  color: hsl(240 12% 16%);
+}
+
+.dark .site-header .hover\:bg-foreground:hover {
+  background: hsl(240 12% 16%) !important;
+  color: hsl(0 0% 98%) !important;
 }
 
 .nav-link-primary {
@@ -166,10 +213,10 @@ body {
 }
 
 .dark .nav-glass-panel {
-  background: color-mix(in srgb, hsl(var(--card)) 42%, transparent);
+  background: color-mix(in srgb, hsl(240 6% 70%) 72%, transparent);
   box-shadow:
-    inset 0 1px 0 color-mix(in srgb, hsl(var(--foreground)) 8%, transparent),
-    0 20px 50px rgba(0, 0, 0, 0.35);
+    inset 0 1px 0 color-mix(in srgb, white 30%, transparent),
+    0 20px 50px rgba(0, 0, 0, 0.22);
 }
 
 .nav-glass-panel-compact {
@@ -181,8 +228,8 @@ body {
 }
 
 .dark .nav-glass-panel-compact {
-  background: color-mix(in srgb, hsl(var(--card)) 48%, transparent);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  background: color-mix(in srgb, hsl(240 6% 72%) 76%, transparent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
 }
 
 .nav-glass-link {
@@ -190,8 +237,16 @@ body {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
+.nav-glass-panel .nav-glass-link {
+  white-space: nowrap;
+}
+
 .nav-glass-link:hover {
   color: hsl(var(--primary));
+}
+
+.nav-mega-title {
+  white-space: nowrap;
 }
 
 .nav-pill {
@@ -296,9 +351,9 @@ html[lang="ar"] body {
 
 .mesh-hero {
   background:
-    radial-gradient(ellipse 75% 55% at 5% 0%, rgba(248, 107, 100, 0.12), transparent 55%),
-    radial-gradient(ellipse 65% 50% at 95% 15%, rgba(255, 237, 237, 0.9), transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, #ffeded 100%);
+    radial-gradient(ellipse 75% 55% at 5% 0%, rgba(248, 107, 100, 0.1), transparent 55%),
+    radial-gradient(ellipse 65% 50% at 95% 15%, rgba(246, 246, 243, 0.95), transparent 50%),
+    linear-gradient(180deg, #fafaf8 0%, #f6f6f3 100%);
 }
 
 .dark .mesh-hero {

@@ -18,7 +18,7 @@ function escapeHtml(value: string) {
 export async function sendContactEmail(data: ContactFormPayload) {
   const user = process.env.GMAIL_USER;
   const pass = process.env.GMAIL_APP_PASSWORD;
-  const to = process.env.CONTACT_TO_EMAIL ?? user;
+  const to = process.env.CONTACT_TO_EMAIL ?? user ?? "zyvrontech@gmail.com";
 
   if (!user || !pass) {
     throw new Error("Email is not configured. Set GMAIL_USER and GMAIL_APP_PASSWORD.");
@@ -36,7 +36,7 @@ export async function sendContactEmail(data: ContactFormPayload) {
   const companyLine = data.company ? ` — ${data.company}` : "";
 
   await transporter.sendMail({
-    from: `"Sama Digital Website" <${user}>`,
+    from: `"Zyvron Tech Website" <${user}>`,
     to,
     replyTo: data.email,
     subject: `New contact form: ${data.name}${companyLine}`,

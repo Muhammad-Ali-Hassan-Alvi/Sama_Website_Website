@@ -17,11 +17,11 @@ export function ContactPage() {
           <MotionInView>
             <div className="space-y-6">
               {[
-                { Icon: Mail, label: t("footer.email"), value: t("footer.email") },
-                { Icon: Phone, label: t("footer.phone"), value: t("footer.phone") },
-                { Icon: MapPin, label: t("footer.location"), value: t("footer.location") },
+                { Icon: Mail, label: t("footer.emailLabel"), value: t("footer.email") },
+                { Icon: Phone, label: t("footer.phoneLabel"), value: t("footer.phone") },
+                { Icon: MapPin, label: t("footer.locationLabel"), value: t("footer.location") },
               ].map(({ Icon, label, value }) => (
-                <div key={label} className="flex gap-4 rounded-2xl border border-border bg-card p-5 text-card-foreground">
+                <div key={value} className="flex gap-4 rounded-2xl border border-border bg-card p-5 text-card-foreground">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>

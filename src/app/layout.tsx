@@ -27,11 +27,12 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Sama Digital",
+  title: "Zyvron Tech",
   description:
-    "Sama Digital — product engineering, web applications, digital marketing, and B2B solutions.",
+    "Zyvron Tech — product engineering, web applications, digital marketing, and B2B solutions for the GCC.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 

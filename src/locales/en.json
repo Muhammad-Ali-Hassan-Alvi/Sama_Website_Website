@@ -6,9 +6,9 @@
     "switchToLight": "Switch to light mode"
   },
   "brand": {
-    "name": "Sama Digital",
+    "name": "Zyvron Tech",
     "tagline": "Product engineering and digital growth for startups, enterprises, and teams across the GCC.",
-    "short": "Software Studio"
+    "short": "Tech"
   },
   "nav": {
     "home": "Home",
@@ -16,7 +16,7 @@
     "whoWeHelp": "Who we help",
     "whoWeAre": "Who we are",
     "howWeDeliver": "How we deliver",
-    "joinUs": "Join Sama",
+    "joinUs": "Join Zyvron",
     "ourProcess": "Our process",
     "services": "Services",
     "industries": "Industries",
@@ -40,7 +40,7 @@
       { "top": "Built for the", "bottom": "GCC & beyond" },
       { "top": "Ship with", "bottom": "Confidence" }
     ],
-    "description": "Sama Digital partners with growing startups and enterprise teams across the GCC to design, build, and scale web products, platforms, and growth programs — with senior talent, Arabic/English delivery, and clear accountability.",
+    "description": "Zyvron Tech partners with growing startups and enterprise teams across the GCC to design, build, and scale web products, platforms, and growth programs — with senior talent, Arabic/English delivery, and clear accountability.",
     "primaryCta": "Schedule a consultation",
     "secondaryCta": "View case studies",
     "manifesto": "We operate as an extension of your team — senior practitioners on every engagement, transparent communication, and standards we apply to our own products.",
@@ -97,7 +97,7 @@
     }
   },
   "whyUs": {
-    "eyebrow": "Why Sama Digital",
+    "eyebrow": "Why Zyvron Tech",
     "title": "A standard of delivery you can measure",
     "subtitle": "We unite strategy, design, and engineering under one roof — so your digital initiatives move forward with clarity, velocity, and accountability.",
     "items": {
@@ -172,7 +172,7 @@
     "subtitle": "Feedback from startups and enterprise teams building across the Gulf.",
     "items": [
       {
-        "quote": "Sama rebuilt our acquisition funnel and reduced cost-per-lead by 38% within the first quarter — with full Arabic and English parity.",
+        "quote": "Zyvron rebuilt our acquisition funnel and reduced cost-per-lead by 38% within the first quarter — with full Arabic and English parity.",
         "name": "Layla Al-Rashid",
         "role": "Marketing Director, Noor Retail"
       },
@@ -194,19 +194,22 @@
     "button": "Contact us"
   },
   "footer": {
-    "description": "Sama Digital engineers products, platforms, and growth systems for startups and enterprises across the GCC — with precision, bilingual delivery, and accountability.",
+    "description": "Zyvron Tech engineers products, platforms, and growth systems for startups and enterprises across the GCC — with precision, bilingual delivery, and accountability.",
     "quickLinks": "Quick links",
     "company": "Company",
     "contact": "Contact",
-    "email": "hello@sama.digital",
-    "phone": "GCC · Remote delivery",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "email": "zyvrontech@gmail.com",
+    "phone": "0344 9993391",
     "location": "UAE · Saudi · GCC",
     "rights": "All rights reserved."
   },
   "about": {
-    "title": "About Sama Digital",
-    "subtitle": "A software studio focused on the Gulf — from startup launches to enterprise platforms",
-    "story": "Sama Digital was founded to serve a clear gap in the GCC market: teams need a partner who combines senior engineering with Arabic/English delivery — whether you're a startup shipping your first product or an enterprise modernizing at scale.",
+    "title": "About Zyvron Tech",
+    "subtitle": "Zyvron Tech — from startup launches to enterprise platforms in the Gulf",
+    "story": "Zyvron Tech was founded to serve a clear gap in the GCC market: teams need a partner who combines senior engineering with Arabic/English delivery — whether you're a startup shipping your first product or an enterprise modernizing at scale.",
     "missionTitle": "Our mission",
     "mission": "Help startups and enterprises across the GCC ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
     "valuesTitle": "Our principles",
@@ -324,7 +327,7 @@
   },
   "careersPage": {
     "title": "Careers",
-    "subtitle": "Join a GCC-focused studio building products for startups and enterprises.",
+    "subtitle": "Join Zyvron Tech — building products for startups and enterprises across the GCC.",
     "openRoles": "Open roles",
     "apply": "Apply now",
     "location": "Location",
@@ -393,7 +396,7 @@
   },
   "faqPage": {
     "title": "FAQ",
-    "subtitle": "Answers to common questions about working with Sama Digital.",
+    "subtitle": "Answers to common questions about working with Zyvron Tech.",
     "items": [
       { "q": "Do you work with startups and enterprises in the GCC?", "a": "Yes. We specialize in partnerships with growing startups and enterprise teams across the UAE, Saudi Arabia, Qatar, and the wider Gulf — with bilingual delivery and timezone alignment." },
       { "q": "Can you support both marketing and engineering?", "a": "Yes. Many clients engage us for integrated delivery — from acquisition strategy through platform engineering — ensuring alignment across disciplines." },

@@ -27,12 +27,12 @@ export function GlassMegaMenu({
   return (
     <div
       className={cn(
-        "grid gap-10 lg:grid-cols-[minmax(200px,260px)_1fr] lg:items-start lg:gap-16 xl:gap-20",
+        "grid gap-6 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-16 lg:gap-y-4",
         className,
       )}
     >
-      <div className="flex flex-col gap-8">
-        <h2 className="font-display text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground md:text-[2.35rem] lg:text-[2.75rem]">
+      <div className="flex w-max max-w-full shrink-0 flex-col gap-4">
+        <h2 className="nav-mega-title font-display text-xl font-bold leading-none tracking-tight text-foreground md:text-[1.35rem] lg:text-2xl">
           {title}
         </h2>
         {viewAll ? (
@@ -45,7 +45,7 @@ export function GlassMegaMenu({
           </Link>
         ) : null}
       </div>
-      <div className="min-w-0">{children}</div>
+      <div className="min-w-0 overflow-hidden">{children}</div>
     </div>
   );
 }

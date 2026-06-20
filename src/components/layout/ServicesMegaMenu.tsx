@@ -37,7 +37,7 @@ function MenuBlock({
 
   return (
     <div>
-      <p className="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-foreground">
+      <p className="mb-3 text-sm font-bold whitespace-nowrap uppercase tracking-[0.12em] text-foreground">
         {t(`serviceCategories.${block.categoryKey}.title`)}
       </p>
       <ul className="space-y-1">
@@ -65,7 +65,7 @@ function ServicesMenuGrid({
   className?: string;
 }) {
   return (
-    <div className={cn("grid gap-10 md:grid-cols-2 md:gap-x-16 md:gap-y-8", className)}>
+    <div className={cn("grid gap-8 md:grid-cols-2 md:gap-x-12 md:gap-y-6", className)}>
       {serviceMenuColumns.map((column, colIndex) => (
         <div key={colIndex} className="space-y-8">
           {column.map((block, blockIndex) => (

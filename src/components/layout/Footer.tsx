@@ -1,5 +1,6 @@
 "use client";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
@@ -39,12 +40,9 @@ export function Footer() {
         <div className="footer-glass-panel relative">
           <div className="section-container grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
             <div className="lg:col-span-1">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="brand-logo flex h-10 w-10 items-center justify-center rounded-2xl text-lg font-extrabold text-white">
-                  S
-                </span>
-                <p className="text-lg font-bold">{t("brand.name")}</p>
-              </div>
+              <Link href="/" className="mb-4 inline-flex">
+                <BrandLogo size="lg" />
+              </Link>
               <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
                 {t("footer.description")}
               </p>
@@ -98,11 +96,15 @@ export function Footer() {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2.5">
                   <Mail className="text-brand mt-0.5 h-4 w-4 shrink-0" />
-                  {t("footer.email")}
+                  <a href="mailto:zyvrontech@gmail.com" className="hover:text-brand transition">
+                    {t("footer.email")}
+                  </a>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-foreground/50" />
-                  {t("footer.phone")}
+                  <a href="tel:+923449993391" className="hover:text-brand transition">
+                    {t("footer.phone")}
+                  </a>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <MapPin className="text-brand mt-0.5 h-4 w-4 shrink-0" />
