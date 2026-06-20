@@ -29,7 +29,7 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: "Zyvron Tech",
   description:
-    "Zyvron Tech — product engineering, web applications, digital marketing, and B2B solutions for the GCC.",
+    "Zyvron Tech — product engineering, web applications, digital marketing, and B2B solutions for teams worldwide.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-icon.png",

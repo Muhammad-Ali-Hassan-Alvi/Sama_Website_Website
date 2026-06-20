@@ -7,7 +7,7 @@
   },
   "brand": {
     "name": "Zyvron Tech",
-    "tagline": "Product engineering and digital growth for startups, enterprises, and teams across the GCC.",
+    "tagline": "Product engineering and digital growth for startups, enterprises, and teams worldwide.",
     "short": "Tech"
   },
   "nav": {
@@ -37,14 +37,14 @@
     "headlines": [
       { "top": "Engineering", "bottom": "Digital excellence" },
       { "top": "From startup", "bottom": "To enterprise" },
-      { "top": "Built for the", "bottom": "GCC & beyond" },
+      { "top": "Built for", "bottom": "Global teams" },
       { "top": "Ship with", "bottom": "Confidence" }
     ],
-    "description": "Zyvron Tech partners with growing startups and enterprise teams across the GCC to design, build, and scale web products, platforms, and growth programs — with senior talent, Arabic/English delivery, and clear accountability.",
+    "description": "Zyvron Tech partners with growing startups and enterprise teams worldwide to design, build, and scale web products, platforms, and growth programs — with senior talent, clear communication, and accountable delivery.",
     "primaryCta": "Schedule a consultation",
     "secondaryCta": "View case studies",
     "manifesto": "We operate as an extension of your team — senior practitioners on every engagement, transparent communication, and standards we apply to our own products.",
-    "promises": ["Startup speed, enterprise standards", "Arabic & English from day one", "GCC timezone alignment"],
+    "promises": ["Startup speed, enterprise standards", "Multilingual-ready delivery", "Timezone-friendly collaboration"],
     "cardTitle": "End-to-end capabilities",
     "cardItems": [
       "Digital transformation & custom software",
@@ -52,14 +52,15 @@
       "Gen AI, data analytics & intelligent automation",
       "Cloud infrastructure, DevOps & cybersecurity",
       "E-commerce design, build & ongoing support",
+      "Google Business Profile & local visibility",
       "Dedicated teams — staff augmentation & QA"
     ],
-    "techStack": ["React", "Next.js", "Node.js", "Gen AI", "PostgreSQL", "Shopify"],
-    "floatingTagline": "Full-stack engineering · Arabic & English · Startups, scale-ups & enterprise across the GCC"
+    "techStack": ["React", "Next.js", "Node.js", "Gen AI", "PostgreSQL", "Shopify", "GMB"],
+    "floatingTagline": "Full-stack engineering · Digital growth · Startups, scale-ups & enterprise worldwide"
   },
   "clients": {
     "title": "Platforms we build on",
-    "subtitle": "We partner with startups shipping their first product and enterprises modernizing platforms across the UAE, Saudi Arabia, and the wider GCC."
+    "subtitle": "We partner with startups shipping their first product and enterprises modernizing platforms — anywhere in the world."
   },
   "services": {
     "eyebrow": "Services",
@@ -102,8 +103,8 @@
     "subtitle": "We unite strategy, design, and engineering under one roof — so your digital initiatives move forward with clarity, velocity, and accountability.",
     "items": {
       "bilingual": {
-        "title": "GCC-ready by design",
-        "description": "Arabic and English architecture, RTL/LTR layouts, and locale-aware campaigns — built for how Gulf markets actually buy and build."
+        "title": "Global-ready by design",
+        "description": "Multilingual architecture, RTL/LTR layouts, and locale-aware campaigns — built for international products from day one."
       },
       "speed": {
         "title": "Disciplined velocity",
@@ -169,7 +170,7 @@
   "testimonials": {
     "eyebrow": "Client perspectives",
     "title": "What our partners say",
-    "subtitle": "Feedback from startups and enterprise teams building across the Gulf.",
+    "subtitle": "Feedback from startups and enterprise teams building products worldwide.",
     "items": [
       {
         "quote": "Zyvron rebuilt our acquisition funnel and reduced cost-per-lead by 38% within the first quarter — with full Arabic and English parity.",
@@ -194,7 +195,7 @@
     "button": "Contact us"
   },
   "footer": {
-    "description": "Zyvron Tech engineers products, platforms, and growth systems for startups and enterprises across the GCC — with precision, bilingual delivery, and accountability.",
+    "description": "Zyvron Tech engineers products, platforms, and growth systems for startups and enterprises worldwide — with precision, clear delivery, and accountability.",
     "quickLinks": "Quick links",
     "company": "Company",
     "contact": "Contact",
@@ -203,19 +204,19 @@
     "locationLabel": "Location",
     "email": "zyvrontech@gmail.com",
     "phone": "0344 9993391",
-    "location": "UAE · Saudi · GCC",
+    "location": "Remote · Worldwide",
     "rights": "All rights reserved."
   },
   "about": {
     "title": "About Zyvron Tech",
-    "subtitle": "Zyvron Tech — from startup launches to enterprise platforms in the Gulf",
-    "story": "Zyvron Tech was founded to serve a clear gap in the GCC market: teams need a partner who combines senior engineering with Arabic/English delivery — whether you're a startup shipping your first product or an enterprise modernizing at scale.",
+    "subtitle": "Zyvron Tech — from startup launches to enterprise platforms worldwide",
+    "story": "Zyvron Tech was founded to help teams ship faster without compromising quality — whether you're a startup launching your first product or an enterprise modernizing at scale.",
     "missionTitle": "Our mission",
-    "mission": "Help startups and enterprises across the GCC ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
+    "mission": "Help startups and enterprises worldwide ship exceptional digital experiences — with disciplined execution, honest communication, and engineering standards we hold ourselves to.",
     "valuesTitle": "Our principles",
     "values": [
       "Senior talent on every engagement.",
-      "Deep GCC market understanding — bilingual by default.",
+      "Internationalization and local growth built in from the start.",
       "Craft and accountability in equal measure."
     ],
     "beliefs": [
@@ -248,7 +249,7 @@
   },
   "industriesPage": {
     "title": "Industries",
-    "subtitle": "Sector playbooks for startups and enterprises building in the Gulf.",
+    "subtitle": "Sector playbooks for startups and enterprises building globally.",
     "detailEyebrow": "Industry expertise",
     "challenges": "Common challenges",
     "solutions": "How we help"
@@ -316,8 +317,8 @@
     },
     "gulfpay": {
       "title": "PayFlow",
-      "subtitle": "Product marketing for a GCC fintech launch",
-      "client": "PayFlow · GCC",
+      "subtitle": "Product marketing for a global fintech launch",
+      "client": "PayFlow · Global",
       "service": "Digital Marketing + Web",
       "challenge": "Launching a payments product required trust-heavy messaging across multiple locales without losing brand premium.",
       "approach": "We paired regulatory-aware copywriters with a bright marketing site and phased ad rollout across Meta and Google.",
@@ -327,30 +328,30 @@
   },
   "careersPage": {
     "title": "Careers",
-    "subtitle": "Join Zyvron Tech — building products for startups and enterprises across the GCC.",
+    "subtitle": "Join Zyvron Tech — building products for startups and enterprises worldwide.",
     "openRoles": "Open roles",
     "apply": "Apply now",
     "location": "Location",
     "type": "Type",
     "perksTitle": "Why work with us",
-    "perks": ["GCC-friendly remote & hybrid", "Startup and enterprise projects", "Arabic/English from day one", "Learning budget & conferences"]
+    "perks": ["Remote-friendly collaboration", "Startup and enterprise projects", "Multilingual delivery", "Learning budget & conferences"]
   },
   "careerPages": {
     "senior-react-dev": {
       "title": "Senior React Developer",
-      "location": "GCC · Remote",
+      "location": "Remote · Worldwide",
       "type": "Full-time",
-      "description": "Build React and Next.js products for startup and enterprise clients across the Gulf. You'll own features end-to-end in a small senior team."
+      "description": "Build React and Next.js products for startup and enterprise clients. You'll own features end-to-end in a small senior team."
     },
     "growth-marketer": {
       "title": "Growth Marketer",
-      "location": "Riyadh / Remote · GCC",
+      "location": "Remote · Worldwide",
       "type": "Full-time",
-      "description": "Run Meta and Google campaigns for Arabic and English audiences across the GCC. You'll optimize funnels and report on measurable growth."
+      "description": "Run Meta and Google campaigns across markets and languages. You'll optimize funnels and report on measurable growth."
     },
     "arabic-copywriter": {
       "title": "Multilingual Copywriter",
-      "location": "GCC · Remote",
+      "location": "Remote · Worldwide",
       "type": "Contract",
       "description": "Write campaign copy, landing pages, and product messaging across English, Arabic, and other locales."
     }
@@ -361,10 +362,10 @@
     "join": "We're hiring"
   },
   "teamMembers": {
-    "layla": { "name": "Layla Al-Rashid", "role": "Head of Strategy", "bio": "Campaign strategist for retail and SaaS brands across the UAE, Saudi Arabia, and the wider GCC." },
-    "omar": { "name": "Omar Hassan", "role": "Lead Engineer", "bio": "Full-stack developer specializing in MERN and Next.js with bilingual i18n architecture for Gulf markets." },
-    "sarah": { "name": "Sarah Mitchell", "role": "Design Director", "bio": "Product designer focused on accessible, RTL/LTR interfaces for startups and enterprises in the region." },
-    "ahmed": { "name": "Ahmed Farouk", "role": "Growth Lead", "bio": "Performance marketer with deep Meta and Google expertise across GCC markets." }
+    "layla": { "name": "Layla Al-Rashid", "role": "Head of Strategy", "bio": "Campaign strategist for retail and SaaS brands across global markets." },
+    "omar": { "name": "Omar Hassan", "role": "Lead Engineer", "bio": "Full-stack developer specializing in MERN and Next.js with multilingual i18n architecture." },
+    "sarah": { "name": "Sarah Mitchell", "role": "Design Director", "bio": "Product designer focused on accessible, RTL/LTR interfaces for startups and enterprises." },
+    "ahmed": { "name": "Ahmed Farouk", "role": "Growth Lead", "bio": "Performance marketer with deep Meta, Google, and local search expertise." }
   },
   "pricingPage": {
     "title": "Pricing",
@@ -378,7 +379,7 @@
     "starter": {
       "name": "Starter",
       "price": "$2,500",
-      "description": "For GCC startups and scale-ups testing new channels.",
+      "description": "For startups and scale-ups testing new channels.",
       "features": ["Single or multi-locale setup", "Landing page + ads setup", "Monthly performance report", "Email support"]
     },
     "growth": {
@@ -390,7 +391,7 @@
     "enterprise": {
       "name": "Enterprise",
       "price": "Custom",
-      "description": "For enterprise teams rolling out platforms across multiple Gulf markets.",
+      "description": "For enterprise teams rolling out platforms across multiple markets.",
       "features": ["Dedicated team", "Custom MERN/Next.js builds", "SLA & priority support", "Multi-market expansion", "Quarterly business reviews"]
     }
   },
@@ -398,7 +399,7 @@
     "title": "FAQ",
     "subtitle": "Answers to common questions about working with Zyvron Tech.",
     "items": [
-      { "q": "Do you work with startups and enterprises in the GCC?", "a": "Yes. We specialize in partnerships with growing startups and enterprise teams across the UAE, Saudi Arabia, Qatar, and the wider Gulf — with bilingual delivery and timezone alignment." },
+      { "q": "Do you work with startups and enterprises globally?", "a": "Yes. We partner with growing startups and enterprise teams worldwide — with flexible collaboration across time zones and languages." },
       { "q": "Can you support both marketing and engineering?", "a": "Yes. Many clients engage us for integrated delivery — from acquisition strategy through platform engineering — ensuring alignment across disciplines." },
       { "q": "How do you approach multilingual products?", "a": "We architect for every target locale from the outset — layout, routing, content, and QA — with native-language review at each stage." },
       { "q": "What are typical project timelines?", "a": "Campaign launches are typically live within 2–4 weeks. Platform and application projects range from 6–12 weeks depending on scope. We provide a detailed timeline in every proposal." },

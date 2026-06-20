@@ -17,6 +17,7 @@ export const serviceSlugs = [
   "saas",
   "ecommerce-design-development",
   "ecommerce-maintenance-support",
+  "google-business-profile",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];
@@ -45,6 +46,7 @@ export const serviceMenuColumns: [ServiceMenuBlock[], ServiceMenuBlock[]] = [
     { type: "link", slug: "blockchain-cryptography" },
     { type: "link", slug: "gen-ai" },
     { type: "link", slug: "data-analytics" },
+    { type: "link", slug: "google-business-profile" },
     { type: "link", slug: "staff-augmentation" },
   ],
   [

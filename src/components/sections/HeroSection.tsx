@@ -4,15 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import {
-  SiNextdotjs,
-  SiNodedotjs,
-  SiOpenai,
-  SiPostgresql,
-  SiReact,
-  SiShopify,
-} from "react-icons/si";
 import { MotionInView } from "@/components/MotionInView";
+import { HeroTechScroller } from "@/components/sections/HeroTechScroller";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -25,15 +18,6 @@ export function HeroSection() {
   const cardItems = t("hero.cardItems", { returnObjects: true }) as string[];
   const techStack = t("hero.techStack", { returnObjects: true }) as string[];
   const promises = t("hero.promises", { returnObjects: true }) as string[];
-
-  const techIcons = [
-    { Icon: SiReact, color: "#61DAFB" },
-    { Icon: SiNextdotjs, color: "currentColor" },
-    { Icon: SiNodedotjs, color: "#68A063" },
-    { Icon: SiOpenai, color: "#412991" },
-    { Icon: SiPostgresql, color: "#4169E1" },
-    { Icon: SiShopify, color: "#96BF48" },
-  ] as const;
 
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -129,19 +113,7 @@ export function HeroSection() {
                         ))}
                       </ul>
                     </div>
-                    <div className="grid grid-cols-3 gap-2 bg-muted/50 p-4 md:p-5">
-                      {techIcons.map(({ Icon, color }, i) => (
-                        <div
-                          key={techStack[i] ?? i}
-                          className="surface-card-hover flex flex-col items-center gap-1.5 rounded-xl border border-border bg-card p-3 text-center"
-                        >
-                          <Icon style={{ color }} className="h-6 w-6" />
-                          <span className="text-[0.6875rem] font-semibold leading-tight text-foreground">
-                            {techStack[i]}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                    <HeroTechScroller labels={techStack} />
                   </CardContent>
                 </Card>
 
